@@ -104,8 +104,8 @@ Insert text here
       <!-- This example requires Tailwind CSS v2.0+ -->
       
 
-      <div class="relative bg-sky-700 pb-32 overflow-hidden">
-        <nav class="bg-transparent relative z-10 border-b border-teal-500 border-opacity-25 lg:bg-transparent lg:border-black lg:border-opacity-25">
+      <div class="relative bg-sky-700 pb-32 overflow-hidden" style="background-color: #222222">
+        <nav class="bg-transparent relative z-10 border-b border-black-500 border-opacity-25 lg:bg-transparent lg:border-black lg:border-opacity-25" style="background-color: #222222">
           <div class="max-w-7xl mx-auto px-2 sm:px-4">
             <div class="relative h-16 flex items-center justify-between lg:border-black lg:border-sky-800">
               
@@ -114,17 +114,17 @@ Insert text here
                   <!-- Current: "bg-black bg-opacity-25", Default: "hover:bg-sky-800" -->
                   <a href="#" class="bg-black bg-opacity-100 rounded-md py-2 px-3 text-sm font-medium text-white">Beranda</a>
 
-                  <a onclick="isiContohSoal()" type="button" class="hover:bg-black rounded-md py-2 px-3 text-sm font-medium text-white">Contoh Soal</a>
+                  <a onclick="" type="button" class="hover:bg-black rounded-md py-2 px-3 text-sm font-medium text-white">Tentang</a>
                   <a onclick="showPaymentModal()" type="button" class="hover:bg-black rounded-md py-2 px-3 text-sm font-medium text-white">Anggota Kelompok</a>
                 </div>
               </div>
             </div>
           </div>
         </nav>
-        <div aria-hidden="true" class="inset-y-0 absolute inset-x-0 left-1/2 transform -translate-x-1/2 w-full overflow-hidden lg:inset-y-0">
+        <div aria-hidden="true" class="inset-y-0 absolute inset-x-0 left-1/2 transform -translate-x-1/2 w-full overflow-hidden lg:inset-y-0" style="background-color: #222222">
           <div class="absolute inset-0 flex">
-            <div class="h-full w-1/2" style="background-color: #0a527b"></div>
-            <div class="h-full w-1/2" style="background-color: #065d8c"></div>
+            <div class="h-full w-1/2" style="background-color: #383838"></div>
+            <div class="h-full w-1/2" style="background-color: #383838"></div>
           </div>
           <div class="relative flex justify-center">
             <svg class="flex-shrink-0" width="1750" height="308" viewBox="0 0 1750 308" xmlns="http://www.w3.org/2000/svg">
@@ -144,7 +144,7 @@ Insert text here
         </header>
       </div>
 
-      <div class="relative -mt-32">
+      <div class="relative -mt-32" style="background-color: #181818">
         <div class="grid grid-cols-12 max-w-7xl mx-auto">
           <div class="col-span-4 lg:col-span-4 pb-6 px-4 lg:pb-16">
             <div class="bg-white rounded-lg shadow overflow-hidden">
@@ -181,6 +181,9 @@ Insert text here
                     <button onclick="location.reload()" type="button" class="bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
                       Coba Lagi
                     </button>
+                    <button onclick="isiContohSoal()" class="ml-5 bg-black border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-gray focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black" style="background-color: #181818">
+                      Contoh
+                    </button>                    
                     <button onclick="generateGraph()" class="ml-5 bg-black border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-gray focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black" style="background-color: #181818">
                       Buat Grafik
                     </button>
@@ -189,7 +192,7 @@ Insert text here
               </div>
             </div>
           </div>
-          <div class="col-span-12 lg:col-span-8 pb-6 px-4 lg:pb-16">
+          <div class="col-span-12 lg:col-span-8 pb-6 px-12 lg:pb-16">
             <div class="bg-white rounded-lg shadow overflow-hidden px-6 py-6">
               <div>
                 <h2 class="text-lg leading-6 font-medium text-gray-900">
@@ -199,7 +202,7 @@ Insert text here
                   Berikut adalah hasil dari perhitungan yang dilakukan
                 </p>
               </div>
-              <canvas id="chart" class="my-3" width="579" height="290" style="display: block; box-sizing: border-box; height: 386px; width: 773px;"></canvas>
+              <canvas id="chart" class="my-3" width="500" height="266" style="display: block; box-sizing: border-box; height: 355px; width: 709px;"></canvas>
               <div id="result" class="mt-4"></div>
             </div>
           </div>
@@ -300,6 +303,7 @@ Insert text here
       });
     }
   </script>
+
 
 
 </body></html>
