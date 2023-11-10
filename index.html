@@ -1,1 +1,453 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div id="paymentModal" class="hidden opacity-0">
+      <div
+        class="relative z-50"
+        aria-labelledby="modal-title"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div
+          class="fixed inset-0 bg-gray-700 bg-opacity-75 transition-opacity"
+        ></div>
 
+        <div class="fixed inset-0 z-10 overflow-y-auto">
+          <div
+            class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0"
+          >
+            <div
+              class="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-5xl sm:p-6"
+            >
+              <div>
+                <div class="mx-auto max-w-7xl">
+                  <div class="space-y-12">
+                    <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+                      Anggota Kelompok
+                    </h2>
+
+                    <ul
+                      role="list"
+                      class="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0"
+                    >
+                      <li>
+                        <div
+                          class="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8"
+                        >
+                          <div
+                            class="aspect-w-3 aspect-h-2 h-0 sm:aspect-w-3 sm:aspect-h-4"
+                          >
+                            <img
+                              class="rounded-lg object-cover shadow-lg"
+                              src="https://simak.unsil.ac.id/us-unsil/foto/2023/237006055.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="sm:col-span-2">
+                            <div class="space-y-4">
+                              <div
+                                class="space-y-1 text-lg font-medium leading-6"
+                              >
+                                <h3>Riqza Harly Saputra</h3>
+                                <p class="text-indigo-600">Insert text here</p>
+                              </div>
+                              <div class="text-lg">
+                                <p class="text-gray-500">
+Insert text here
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          class="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8"
+                        >
+                          <div
+                            class="aspect-w-3 aspect-h-2 h-0 sm:aspect-w-3 sm:aspect-h-4"
+                          >
+                            <img
+                              class="rounded-lg object-cover shadow-lg"
+                              src="https://simak.unsil.ac.id/us-unsil/foto/2023/237006056.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="sm:col-span-2">
+                            <div class="space-y-4">
+                              <div
+                                class="space-y-1 text-lg font-medium leading-6"
+                              >
+                                <h3>Icep Septian Fajar</h3>
+                                <p class="text-indigo-600">
+Insert text here
+                                </p>
+                              </div>
+                              <div class="text-lg">
+Insert text here
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div
+                          class="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8"
+                        >
+                          <div
+                            class="aspect-w-3 aspect-h-2 h-0 sm:aspect-w-3 sm:aspect-h-4"
+                          >
+                            <img
+                              class="rounded-lg object-cover shadow-lg"
+                              src="https://simak.unsil.ac.id/us-unsil/foto/2023/237006061.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="sm:col-span-2">
+                            <div class="space-y-4">
+                              <div
+                                class="space-y-1 text-lg font-medium leading-6"
+                              >
+                                <h3>Mohammad Daffa Pradiva Untara</h3>
+                                <p class="text-indigo-600">Insert text here</p>
+                              </div>
+                              <div class="text-lg">
+                                <p class="text-gray-500">
+Insert text here
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <!-- More people... -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6"
+              >
+                <button
+                  onclick="hidePaymentModal()"
+                  type="button"
+                  class="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+                >
+                  Tutup
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <!-- This example requires Tailwind CSS v2.0+ -->
+      <div class="bg-sky-600 hidden md:block">
+        <div class="max-w-7xl mx-auto py-3 px-4">
+          <div class="flex items-center justify-between flex-wrap">
+            <div class="w-0 flex-1 flex items-center">
+              <span class="flex p-2 rounded-lg bg-sky-800">
+                <!-- Heroicon name: outline/speakerphone -->
+                <svg
+                  class="h-6 w-6 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"
+                  />
+                </svg>
+              </span>
+              <p class="ml-3 font-medium text-white truncate">
+                <span class="md:hidden"> Lihat Manual Book Sekarang </span>
+                <span class="hidden md:inline">
+                  Download Manual Book & Tata Cara Penggunaan Aplikasi
+                </span>
+              </p>
+            </div>
+            <div
+              class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto"
+            >
+              <a
+                target="_blank"
+                href="https://www.canva.com/design/DAFh9OCuSTg/SMS9QNAavT2a_Hoir0WoVA/view?utm_content=DAFh9OCuSTg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelin"
+                class="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-sky-600 bg-white hover:bg-indigo-50"
+              >
+                Download
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-sky-700 pb-32 overflow-hidden">
+        <nav
+          class="bg-transparent relative z-10 border-b border-teal-500 border-opacity-25 lg:bg-transparent lg:border-white lg:border-opacity-25"
+        >
+          <div class="max-w-7xl mx-auto px-2 sm:px-4">
+            <div
+              class="relative h-16 flex items-center justify-between lg:border-b lg:border-sky-800"
+            >
+              <div class="px-2 flex items-center lg:px-0">
+                <div class="flex-shrink-0">
+                  <img
+                    class="block h-8 w-auto"
+                    src="https://if.unsil.ac.id/wp-content/uploads/2022/10/logo-web.pn"
+                    alt="Workflow"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex-1 px-2 flex justify-center md:justify-end hidden md:flex"
+              >
+                <div class="flex gap-2">
+                  <!-- Current: "bg-black bg-opacity-25", Default: "hover:bg-sky-800" -->
+                  <a
+                    href="#"
+                    class="bg-black bg-opacity-25 rounded-md py-2 px-3 text-sm font-medium text-white"
+                    >Beranda</a
+                  >
+
+                  <a
+                    onclick="isiContohSoal()"
+                    type="button"
+                    class="hover:bg-sky-800 rounded-md py-2 px-3 text-sm font-medium text-white"
+                    >Contoh Soal</a
+                  >
+                  <a
+                    onclick="showPaymentModal()"
+                    type="button"
+                    class="hover:bg-sky-800 rounded-md py-2 px-3 text-sm font-medium text-white"
+                    >Anggota Kelompok</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div
+          aria-hidden="true"
+          class="inset-y-0 absolute inset-x-0 left-1/2 transform -translate-x-1/2 w-full overflow-hidden lg:inset-y-0"
+        >
+          <div class="absolute inset-0 flex">
+            <div class="h-full w-1/2" style="background-color: #0a527b"></div>
+            <div class="h-full w-1/2" style="background-color: #065d8c"></div>
+          </div>
+          <div class="relative flex justify-center">
+            <svg
+              class="flex-shrink-0"
+              width="1750"
+              height="308"
+              viewBox="0 0 1750 308"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M284.161 308H1465.84L875.001 182.413 284.161 308z"
+                fill="#0369a1"
+              />
+              <path
+                d="M1465.84 308L16.816 0H1750v308h-284.16z"
+                fill="#065d8c"
+              />
+              <path d="M1733.19 0L284.161 308H0V0h1733.19z" fill="#0a527b" />
+              <path
+                d="M875.001 182.413L1733.19 0H16.816l858.185 182.413z"
+                fill="#0a4f76"
+              />
+            </svg>
+          </div>
+        </div>
+        <header class="relative py-10">
+          <div class="max-w-7xl mx-auto px-4">
+            <h1 class="text-3xl font-bold text-white">
+              Konversi Fungsi Kuadrat ke Dalam Grafik
+            </h1>
+          </div>
+        </header>
+      </div>
+
+      <div class="relative -mt-32">
+        <div class="grid grid-cols-12 max-w-7xl mx-auto">
+          <div class="col-span-12 lg:col-span-8 pb-6 px-4 lg:pb-16">
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+              <div class="divide-y divide-gray-200 lg:divide-y-0 lg:divide-x">
+                <form
+                  class="divide-y divide-gray-200 lg:col-span-9"
+                  id="interpolateForm"
+                >
+                  <div class="py-6 px-4 sm:p-6 lg:pb-8">
+                    <div>
+                      <h2 class="text-lg leading-6 font-medium text-gray-900">
+                        Grafik Fungsi Kuadrat
+                      </h2>
+                      <p class="mt-1 text-sm text-gray-500">
+                        Masukkan data yang diperlukan untuk membuat grafik fungsi kuadrat.
+                      </p>
+                    </div>
+
+                    <div class="mt-6 grid grid-cols-12 gap-6">
+                      <div class="col-span-12 sm:col-span-6">
+                      <label for="input-a" class="block text-sm font-medium text-gray-700">Koefisien a:</label>
+                      <input type="number" id="input-a" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm" />
+                      </div>
+
+                      <div class="col-span-12 sm:col-span-6">
+                        <label for="input-b" class="block text-sm font-medium text-gray-700">Koefisien b:</label>
+                        <input type="number" id="input-b" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm" />
+                      </div>
+
+                      <div class="col-span-12 sm:col-span-6">
+                        <label for="input-c" class="block text-sm font-medium text-gray-700">Koefisien c:</label>
+                        <input type="number" id="input-c" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm" />
+                      </div>   
+                    </div>
+                  </div>
+                  <div class="mt-4 py-4 px-4 flex justify-end sm:px-6">
+                    <button
+                      onclick="location.reload()"
+                      type="button"
+                      class="bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
+                    >
+                      Coba Lagi
+                    </button>
+                    <button onclick="generateGraph()"
+                      class="ml-5 bg-sky-700 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-sky-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
+                    >
+                      Buat Grafik
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-4 pb-6 px-4 lg:pb-16">
+            <div class="bg-white rounded-lg shadow overflow-hidden px-4 py-4">
+              <div>
+                <h2 class="text-lg leading-6 font-medium text-gray-900">
+                  Chart & Hasil Perhitungan
+                </h2>
+                <p class="mt-1 text-sm text-gray-500">
+                  Berikut adalah hasil dari perhitungan yang dilakukan
+                </p>
+              </div>
+              <canvas id="chart" class="my-3"></canvas>
+              <div id="result" class="mt-4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      document
+        .getElementById("interpolateForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Menggambar grafik scatter plot dengan Chart.js
+           
+          var scatterChart = new Chart(ctx, {
+            type: "scatter",
+            options: {
+              scales: {
+                x: {
+                  beginAtZero: false,
+                },
+                y: {
+                  beginAtZero: false,
+                },
+              },
+              plugins: {},
+            },
+          });
+        });
+    </script>
+
+    <script>
+      function isiContohSoal() {
+        document.getElementById("input-a").value = "2";
+        document.getElementById("input-b").value = "3";
+        document.getElementById("input-c").value = "4";
+      }
+    </script>
+
+    <script>
+      function showPaymentModal() {
+        // Menampilkan modal
+        document.getElementById("paymentModal").classList.add("opacity-100");
+        document.getElementById("paymentModal").classList.remove("opacity-0");
+        document.getElementById("paymentModal").classList.remove("hidden");
+
+        // Mengatur fokus pada elemen modal untuk aksesibilitas
+        document.getElementById("modal-title").focus();
+      }
+
+      function hidePaymentModal() {
+        // Menyembunyikan modal
+        document.getElementById("paymentModal").classList.remove("opacity-100");
+        document.getElementById("paymentModal").classList.add("opacity-0");
+        document.getElementById("paymentModal").classList.add("hidden");
+      }
+    </script>
+  <script>
+    function generateGraph() {
+      // Get the input values
+      var inputA = parseFloat(document.getElementById('input-a').value);
+      var inputB = parseFloat(document.getElementById('input-b').value);
+      var inputC = parseFloat(document.getElementById('input-c').value);
+      var puncakX = - inputB / (2 * inputA);
+      var puncakY = - (Math.pow(inputB, 2) - (4 * inputA * inputC)) / (4 * inputA);
+
+          // Menampilkan hasil kalkulasi pada output
+      document.getElementById("result").innerHTML = "Titik Puncak: (" + puncakX.toFixed(2) + ", " + puncakY.toFixed(2) + ")";
+      // Define the x values
+      var xValues = [];
+      for (var x = -10; x <= 10; x++) {
+        xValues.push(x);
+      }
+
+      // Calculate the y values using the quadratic function
+      var yValues = [];
+      for (var i = 0; i < xValues.length; i++) {
+        var x = xValues[i];
+        var y = inputA * Math.pow(x, 2) + inputB * x + inputC;
+        yValues.push(y);
+      }
+
+      // Create the chart
+      var ctx = document.getElementById('chart').getContext('2d');
+      var chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: xValues,
+          datasets: [{
+            label: 'Fungsi Kuadrat',
+            data: yValues,
+            borderColor: 'rgb(75, 192, 192)',
+            tension: 0.1
+          }]
+        },
+        options: {}
+      });
+    }
+  </script>
+</body>
+</html>
