@@ -1,10 +1,11 @@
-<html><head>
+<html>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  </head>
-  <body>
+</head>
+  <body class="web dark">
     <div id="paymentModal" class="opacity-0 hidden">
       <div class="relative z-50" aria-labelledby="modal-title" role="dialog" aria-modal="true">
         <div class="fixed inset-0 bg-gray-700 bg-opacity-75 transition-opacity"></div>
@@ -135,7 +136,7 @@ Insert text here
             </svg>
           </div>
         </div>
-        <header class="relative py-8" style="background-color: #181818">
+        <header class="relative py-4" style="background-color: #181818">
           <div class="max-w-7xl mx-auto px-4">
             <h1 class="text-3xl font-bold text-white">
               Konversi Fungsi Kuadrat ke Dalam Grafik
@@ -202,8 +203,8 @@ Insert text here
                   Berikut adalah hasil dari perhitungan yang dilakukan
                 </p>
               </div>
-              <canvas id="chart" class="my-3" width="777" height="413" style="display: block; box-sizing: border-box; height: 413px; width: 777px;"></canvas>
-              <div id="result" class="mt-4">Titik Puncak: (-0.75, 2.88)</div>
+              <canvas id="chart" class="my-3" width="186" height="65" style="display: block; box-sizing: border-box; height: 172px; width: 560px;"></canvas>
+              <div id="result" class="block text-sm font-medium text-gray-700""></div>
             </div>
           </div>
         </div>
@@ -303,6 +304,7 @@ Insert text here
       });
     }
   </script>
+
 
 
 
