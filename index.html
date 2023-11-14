@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Kalkulus I</title>
+
+	<link rel="stylesheet" href="style.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body onload="hideLoader()">
+
+	<!-- /header -->
+	<header class="header">
+		<a href="index.html" class="logo">Kalkulus I</a>
+
+		<nav class="navbar">
+			<a href="index.html">Beranda</a>
+			<a href="hitung.html">Hitung</a>
+			<a href="riwayat.html">Riwayat</a>
+			<a href="tentang.html">Tentang</a>
+			<a href="javascript:exit()">Keluar</a>
+		</nav>
+
+		<script>
+		function exit() {
+        var confirmExit = confirm("Apakah Anda yakin ingin keluar?");
+        if (confirmExit) {
+            window.location.href = "https://www.google.com";
+            }
+        }
+		</script>
+
+
+		<div class="sosial-media">
+			<a href="https://www.facebook.com/izaa.hngkl?mibextid=2JQ9oc"><i class='bx bxl-facebook'></i></a>
+			<a href="https://instagram.com/daffapradivaa?igshid=djllOTRzYnFua2Z6"><i class='bx bxl-instagram'></i></a>
+			<a href="https://wa.me/+6285157324426"><i class='bx bxl-whatsapp'></i></a>
+		</div>
+	</header>
+
+	<!-- /page loader -->
+	<div class="page-loader">
+    <div class="txt">Loading...</div>
+	</div>
+
+	<script>
+	function hideLoader(){
+	  $('.page-loader').delay(1500).fadeOut('slow');
+	}
+	</script>
+
+	<!-- Isi Kontent-->
+	<div class="container">
+		<div class="content">
+			<h1>Welcome to our website!.</h1>
+			<p>Halaman ini berisi tentang salah satu materi kalkulus I yaitu fungsi kuadrat. Fungsi kuadrat merupakan aturan yang memasangkan semua anggota daerah asal tepat satu ke daerah kawan dengan pangkat pada variabel tertingginya adalah dua. Bentuk umum dari fungsi kuadrat yaitu f(x) = ax2 + bx + c.</p>
+		</div>
+		<div class="icon">
+			<img src="Teaching-cuate.svg" class="animated">
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="copyright">
+			&copy; Copyright <strong><span>Kalkulus I</span></strong> 2023.
+		</div>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

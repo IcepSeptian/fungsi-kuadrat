@@ -6,21 +6,116 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
   <body style="background-color: #181818">
-        <main>
+    <div id="paymentModal" class="opacity-0 hidden">
+      <div class="relative z-50" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-gray-700 bg-opacity-75 transition-opacity"></div>
+
+        <div class="fixed inset-0 z-10 overflow-y-auto">
+          <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+            <div class="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-5xl sm:p-6">
+              <div>
+                <div class="mx-auto max-w-7xl">
+                  <div class="space-y-12">
+                    <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+                      Anggota Kelompok
+                    </h2>
+
+                    <ul role="list" class="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0">
+                      <li>
+                        <div class="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
+                          <div class="aspect-w-3 aspect-h-2 h-0 sm:aspect-w-3 sm:aspect-h-4">
+                            <img class="rounded-lg object-cover shadow-lg" src="https://simak.unsil.ac.id/us-unsil/foto/2023/237006055.jpg" alt="">
+                          </div>
+                          <div class="sm:col-span-2">
+                            <div class="space-y-4">
+                              <div class="space-y-1 text-lg font-medium leading-6">
+                                <h3>Riqza Harly Saputra</h3>
+                                <p class="text-indigo-600">Insert text here</p>
+                              </div>
+                              <div class="text-lg">
+                                <p class="text-gray-500">
+Insert text here
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li><br>
+                      <li>
+                        <div class="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
+                          <div class="aspect-w-3 aspect-h-2 h-0 sm:aspect-w-3 sm:aspect-h-4">
+                            <img class="rounded-lg object-cover shadow-lg" src="https://simak.unsil.ac.id/us-unsil/foto/2023/237006056.jpg" alt="">
+                          </div>
+                          <div class="sm:col-span-2">
+                            <div class="space-y-4">
+                              <div class="space-y-1 text-lg font-medium leading-6">
+                                <h3>Icep Septian Fajar</h3>
+                                <p class="text-indigo-600">
+Insert text here
+                                </p>
+                              </div>
+                              <div class="text-lg">
+Insert text here
+                                <p></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li><br>
+
+                      <li>
+                        <div class="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
+                          <div class="aspect-w-3 aspect-h-2 h-0 sm:aspect-w-3 sm:aspect-h-4">
+                            <img class="rounded-lg object-cover shadow-lg" src="https://simak.unsil.ac.id/us-unsil/foto/2023/237006061.jpg" alt="">
+                          </div>
+                          <div class="sm:col-span-2">
+                            <div class="space-y-4">
+                              <div class="space-y-1 text-lg font-medium leading-6">
+                                <h3>Mohammad Daffa Pradiva Untara</h3>
+                                <p class="text-indigo-600">Insert text here</p>
+                              </div>
+                              <div class="text-lg">
+                                <p class="text-gray-500">
+Insert text here
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <!-- More people... -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                <button onclick="hidePaymentModal()" type="button" class="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm">
+                  Tutup
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
       <!-- This example requires Tailwind CSS v2.0+ -->
       
 
       <div class="relative bg-sky-700 pb-32 overflow-hidden" style="background-color: #222222">
-        <nav class="bg-transparent relative z-10 border-b border-gray-800 border-opacity-25 lg:bg-transparent lg:border-black lg:border-opacity-25" style="background-color: #222222">
+        <nav class="bg-transparent relative z-10 border-b border-black-500 border-opacity-25 lg:bg-transparent lg:border-black lg:border-opacity-25" style="background-color: #222222">
           <div class="max-w-7xl mx-auto px-2 sm:px-4">
             <div class="relative h-16 flex items-center justify-between lg:border-black lg:border-sky-800">
               
-              <div class="flex-1 px-2 flex justify-center md:justify-mid">
-                <div class="flex gap-8">
+              <div class="flex-1 px-2 flex justify-center md:justify-mid hidden md:flex">
+                <div class="flex gap-16">
                   <!-- Current: "bg-black bg-opacity-25", Default: "hover:bg-sky-800" -->
-                  <a href="#" type="button" class="bg-black bg-opacity-100 rounded-md py-2 px-3 text-sm font-medium text-white">Beranda</a>
+                  <a href="index.html" class="bg-black bg-opacity-100 rounded-md py-2 px-3 text-sm font-medium text-white">Beranda</a>
                   <a href="/project-calculus-I/tentang.html" type="button" class="hover:bg-black rounded-md py-2 px-3 text-sm font-medium text-white">Tentang</a>
-                  <a href="/project-calculus-I/anggota-kelompok.html" type="button" class="hover:bg-black rounded-md py-2 px-3 text-sm font-medium text-white">Anggota Kelompok</a>
+                  <a onclick="showPaymentModal()" type="button" class="hover:bg-black rounded-md py-2 px-3 text-sm font-medium text-white">Anggota Kelompok</a>
                 </div>
               </div>
             </div>
@@ -107,7 +202,7 @@
                   Berikut adalah hasil dari perhitungan yang dilakukan
                 </p>
               </div>
-              <canvas id="chart" class="my-3" width="186" height="88" style="display: block; box-sizing: border-box; height: 253px; width: 560px;"></canvas>
+              <canvas id="chart" class="my-3" width="186" height="65" style="display: block; box-sizing: border-box; height: 253px; width: 560px;"></canvas>
               <div id="result" class="block text-sm font-medium text-gray-700""></div>
             </div>
           </div>
@@ -208,5 +303,9 @@
       });
     }
   </script>
-</body>
-</html>
+
+
+
+
+
+</body></html>
