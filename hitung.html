@@ -18,14 +18,21 @@
               <div class="flex-1 px-2 flex justify-center md:justify-mid">
                 <div class="flex gap-8">
                   <!-- Current: "bg-black bg-opacity-25", Default: "hover:bg-sky-800" -->
-                  <a href="#" type="button" class="bg-black bg-opacity-100 rounded-md py-2 px-3 text-sm font-medium text-white">Beranda</a>
-                  <a href="/project-calculus-I/tentang.html" type="button" class="hover:bg-black rounded-md py-2 px-3 text-sm font-medium text-white">Tentang</a>
-                  <a href="/project-calculus-I/anggota-kelompok.html" type="button" class="hover:bg-black rounded-md py-2 px-3 text-sm font-medium text-white">Anggota Kelompok</a>
+                  <a href="" type="button" class="hover:bg-black rounded-md py-2 px-3 text-sm font-medium text-white">Beranda</a>
+                  <a href="#" type="button" class="bg-black bg-opacity-100 rounded-md py-2 px-3 text-sm font-medium text-white">Hitung</a>
+                  <a href="/project-calculus-I/anggota-kelompok.html" type="button" class="hover:bg-black rounded-md py-2 px-3 text-sm font-medium text-white">About Us</a>
+                  <a href="javascript:exit()" type="button" class="hover:bg-black rounded-md py-2 px-3 text-sm font-medium text-white">Keluar</a>
                 </div>
               </div>
             </div>
           </div>
         </nav>
+        <script>function exit() {
+          var confirmExit = confirm("Apakah Anda yakin ingin keluar?");
+          if (confirmExit) {
+              window.location.href = "https://www.google.com";
+              }
+          }</script>
         <div aria-hidden="true" class="inset-y-0 absolute inset-x-0 left-1/2 transform -translate-x-1/2 w-full overflow-hidden lg:inset-y-0" style="background-color: #222222">
           <div class="absolute inset-0 flex">
             <div class="h-full w-1/2" style="background-color: #383838"></div>
