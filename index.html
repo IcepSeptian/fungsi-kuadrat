@@ -10,7 +10,6 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body style="background-color: #181818; font-family: 'Poppins', sans-serif;">
-  <!--Header-->
   <header>
     <nav class="py-5 md:flex md:items-center md:justify-between" style="background-color: #222222">
       <div class="flex justify-between items-center">
@@ -36,7 +35,6 @@
     </nav>
   </header>
 
-  <!--Main-->
   <main>
     <section class="text-gray-600 body-font">
       <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
@@ -63,12 +61,11 @@
       </div>
       <div class="relative -mt-32" style="background-color: #181818">
         <div class="grid grid-cols-12 max-w-7xl mx-auto">
-          <!--Input user-->
           <div class="py-2 col-span-12 lg:col-span-5 pb-6 px-4 lg:pb-16">
             <div class="bg-white rounded-lg shadow overflow-hidden">
               <div class="divide-y divide-gray-200 lg:divide-y-0 lg:divide-x">
+                <!--Input user-->
                 <form class="divide-y divide-gray-200 lg:col-span-9" id="koefisien">                 
-                  <!--Koefisien-->
                   <div class="py-6 px-4 sm:p-6 lg:pb-4">
                     <div>
                       <h2 class="text-lg leading-6 font-medium text-gray-900">
@@ -94,7 +91,6 @@
                     </div>
                   </div>
 
-                  <!--Tombol-->
                   <div class="mt-2 py-4 px-4 flex justify-end sm:px-6">
                     <button onclick="location.reload()" type="button" class="bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
                       Coba Lagi
@@ -122,8 +118,8 @@
                   Berikut adalah hasil dari perhitungan yang dilakukan
                 </p>
               </div>
-              <canvas id="chart" class="my-3" width="186" height="88" style="display: block; box-sizing: border-box; height: 253px; width: 560px;"></canvas>
-              <div id="result" class="block text-sm font-medium text-gray-700"></div>
+              <canvas id="grafik" class="my-3" width="186" height="88" style="display: block; box-sizing: border-box; height: 253px; width: 560px;"></canvas>
+              <div id="hasil" class="block text-sm font-medium text-gray-700"></div>
             </div>
           </div>
         </div>
@@ -222,7 +218,6 @@
     </section>
   </main>
 
-  <!--Footer-->
   <footer class="body-font" style="background-color: grey">
     <div class="container px-1 py-3 mx-auto flex items-center sm:flex-row flex-col">
       <p class="text-xl w-full text-center text-black sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4">© 2023 Kalkulus I</p>
