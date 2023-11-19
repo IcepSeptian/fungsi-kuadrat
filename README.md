@@ -1,2 +1,2 @@
 # Fungsi Kuadrat
-https://icepseptian.github.io/fungsi-kuadrat/
+https://icepseptian.github.io/fungsi-kuadrat
