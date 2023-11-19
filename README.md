@@ -1,2 +1,2 @@
-# project-calculus-I
-https://icepseptian.github.io/grafik-fungsi/
+# Fungsi Kuadrat
+https://icepseptian.github.io/fungsi-kuadrat/
